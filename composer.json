@@ -1,0 +1,14 @@
+{
+	"name": "thunbolt/template-form-renderer",
+	"autoload": {
+		"psr-4": {
+			"Thunbolt\\": "src/"
+		}
+	},
+	"require": {
+		"nette/forms": "^3.0",
+		"nette/application": "^3.0",
+		"nette/di": "^3.0"
+	},
+	"minimum-stability": "alpha"
+}
