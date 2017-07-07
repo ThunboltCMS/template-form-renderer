@@ -8,8 +8,8 @@ interface ITemplateFormRenderer {
 
 	/**
 	 * @param string $file
-	 * @return ITemplateFormRenderer
+	 * @return TemplateFormRenderer
 	 */
-	public function create(string $file): ITemplateFormRenderer;
+	public function create(string $file): TemplateFormRenderer;
 
 }

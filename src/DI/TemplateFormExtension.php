@@ -14,8 +14,8 @@ class TemplateFormExtension extends CompilerExtension {
 		$builder = $this->getContainerBuilder();
 
 		$builder->addDefinition($this->prefix('templateFormRenderer'))
-			->setClass(ITemplateFormRenderer::class)
-			->setFactory(TemplateFormRenderer::class);
+			->setImplement(ITemplateFormRenderer::class)
+			->setClass(TemplateFormRenderer::class);
 	}
 
 }
