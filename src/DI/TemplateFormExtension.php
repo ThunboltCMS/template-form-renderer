@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace Thunbolt\DI;
 
@@ -10,12 +8,11 @@ use Thunbolt\TemplateFormRenderer;
 
 class TemplateFormExtension extends CompilerExtension {
 
-	public function loadConfiguration() {
+	public function loadConfiguration(): void {
 		$builder = $this->getContainerBuilder();
 
-		$builder->addDefinition($this->prefix('templateFormRenderer'))
-			->setImplement(ITemplateFormRenderer::class)
-			->setClass(TemplateFormRenderer::class);
+		$builder->addFactoryDefinition($this->prefix('templateFormRenderer'))
+			->setImplement(ITemplateFormRenderer::class);
 	}
 
 }
